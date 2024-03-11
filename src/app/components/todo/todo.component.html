@@ -1,0 +1,53 @@
+<div class="form">
+  <h2>Insert your Todos here!</h2>
+
+  <div>
+    <input
+      #newTodos
+      placeholder="New Task..."
+      (keyup.enter)="addTodo(newTodos.value); newTodos.value = ''"
+    />
+    <span
+      class="material-symbols-outlined"
+      (click)="addTodo(newTodos.value); newTodos.value = ''"
+    >
+      add
+    </span>
+  </div>
+</div>
+
+<ul class="todos">
+  <li
+    *ngFor="let todo of todos; let i = index"
+    [ngClass]="{ checked: todo.done }"
+  >
+    {{ todo.text }}
+    <div class="menu">
+      <span
+        class="material-symbols-outlined check"
+        (click)="toggleTodoStatus(todo)"
+        >check</span
+      >
+      <span *ngIf="editingTodoIndex !== i; else editMode">
+        <span class="material-symbols-outlined edit" (click)="startEditing(i)"
+          >edit</span
+        >
+      </span>
+
+      <ng-template #editMode>
+        <div class="template">
+          <p>Edit Todo</p>
+          <input type="text" [value]="todo.text" #updatedText />
+          <div>
+            <button (click)="updateTodo(updatedText.value, i)">Save</button>
+            <button (click)="cancelEditing()">Cancel</button>
+          </div>
+        </div>
+      </ng-template>
+
+      <span class="material-symbols-outlined trash" (click)="removeTodo(todo)"
+        >delete</span
+      >
+    </div>
+  </li>
+</ul>

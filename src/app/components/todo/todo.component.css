@@ -1,0 +1,118 @@
+.edit {
+  color: #ff7a48;
+}
+.trash {
+  color: #e3371e;
+}
+.check {
+  color: #0593a2;
+}
+.form {
+  width: 60%;
+  text-align: center;
+  margin: 2rem auto;
+}
+.form h2 {
+  padding: 1rem;
+  color: #151f30;
+}
+.form div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.form input {
+  width: 80%;
+  font-size: 16px;
+  padding: 0.6rem;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #0593a2;
+  transition: ease 0.4s;
+}
+.form input:hover {
+  background-color: #dbf5f7;
+}
+.checked {
+  text-decoration: line-through;
+  background-color: #dbf5f7;
+  color: #151f30;
+}
+.form span {
+  border: 1px solid #0593a2;
+  padding: 0.4rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: ease 0.4s;
+}
+.form span:hover {
+  background-color: #0593a2;
+  color: #fff;
+}
+
+.todos li {
+  border: 1px solid #0593a2;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 60%;
+  margin: 1rem auto;
+  justify-content: space-between;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.todos li div span {
+  margin: 0 0.6rem;
+  cursor: pointer;
+}
+.menu {
+  display: flex;
+}
+.template {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  right: 20%;
+  left: 20%;
+  top: 25%;
+  height: 380px;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #0593a2;
+  border-radius: 8px;
+  background-color: #dbf5f7;
+}
+.template p {
+  font-size: 32px;
+  padding: 1rem;
+}
+.template input {
+  padding: 0.6rem;
+  font-size: 16px;
+  outline: none;
+  border-radius: 8px;
+  border: 0.4px solid #0593a2;
+  margin: 1rem auto;
+  width: 80%;
+}
+.template button {
+  padding: 0.6rem;
+  width: 200px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0.2px solid #0593a2;
+  background-color: #fff;
+  transition: ease 0.4s;
+}
+.template button:hover {
+  color: #0593a2;
+}
+.template div {
+  display: flex;
+  padding: 1rem;
+  margin: 0 auto;
+  gap: 1rem;
+}
